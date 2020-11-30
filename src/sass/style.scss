@@ -1,6 +1,8 @@
 $theme-colors: ("primary": #ff3a52,
     "dark": #000000);
 
+    // $spacer: 1em;
+
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body {
@@ -130,6 +132,22 @@ body {
     .info-card-icon{
         img{
             width: 50px;
+        }
+    }
+}
+
+#card{
+    margin-top: 10rem;
+    .card-title{
+
+    }
+    .card-item{
+        .card-item-info{
+
+        }
+        .card-item-team{
+            width: 100%;
+            border-top: 1px solid #cad0db;
         }
     }
 }

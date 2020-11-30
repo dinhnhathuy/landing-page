@@ -1,7 +1,7 @@
 $theme-colors: ("primary": #ff3a52,
     "dark": #000000);
 
-    // $spacer: 1em;
+// $spacer: 1em;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -116,38 +116,114 @@ body {
     .intro-info-3 {
         text-align: left;
         max-width: 95%;
-        a{
+
+        a {
             color: blue;
             font-weight: bold;
         }
     }
 }
 
-#info{
+#info {
     margin-top: 10rem;
 }
 
-.info-card{
+.info-card {
     margin-top: 5rem;
-    .info-card-icon{
-        img{
+
+    .info-card-icon {
+        img {
             width: 50px;
         }
     }
 }
 
-#card{
+#card {
     margin-top: 10rem;
-    .card-title{
 
-    }
-    .card-item{
-        .card-item-info{
+    .card-title {}
 
-        }
-        .card-item-team{
+    .card-item {
+        .card-item-info {}
+
+        .card-item-team {
             width: 100%;
             border-top: 1px solid #cad0db;
+        }
+    }
+}
+
+#team {
+    margin-top: 10rem;
+
+    .team-title {
+        text-align: center;
+
+        .team-info {}
+    }
+
+    .leaders {
+        margin-top: 4rem;
+
+        .leader {
+            text-align: center;
+
+            .leader-info {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+#review {
+    margin-top: 6rem;
+
+    .reviews {
+        .review {
+            margin-top: 4rem;
+
+            .review-mess {}
+
+            .reviewer {
+                margin-top: 3rem;
+
+                .reviewer-avar {
+                    text-align: center;
+                }
+
+                img {
+                    width: 50px;
+                }
+
+                .reviewer-info {}
+            }
+        }
+    }
+}
+
+#cta {
+    margin-top: 10rem;
+    .cta {
+        >div {
+            padding-left: 5em;
+            padding-right: 5em;
+        }
+        >div:last-child{
+            text-align: center;
+        }
+
+        height: 250px;
+        background-color: #FFC928;
+        // opacity: 0.2;
+        border-radius: 12px;
+
+        .cta-info {
+            // padding: 3rem;
+        }
+
+        .cta-btn {
+            background-color: #0E6FFF;
+            border: #0E6FFF;
         }
     }
 }
@@ -165,9 +241,10 @@ body {
     }
 }
 
-.slider{
+.slider {
     margin-top: 15rem;
-    .slider-title{
+
+    .slider-title {
         text-align: center;
     }
 }
@@ -179,4 +256,15 @@ body {
     left: 0;
     right: 0;
     margin-top: 3rem;
+}
+
+.footer-container{
+    background-color: #000000;
+    color: #FFFF;
+    height: 20rem;
+}
+.term-container{
+    background-color: #000000;
+    color: #FFFF;
+    border-top: 2px solid #65697d;
 }

@@ -40,30 +40,20 @@ p {
     // right: 0;
     margin-top: 5em;
 
-    .intro-title-1 {
-        width: 30%;
+    .btn-intro1 {
+        background-color: #0E6FFF;
+        border: #0E6FFF;
+    }
 
-        .btn-prev {
-            position: absolute;
-            bottom: 1rem;
-            z-index: 1;
-        }
+    .intro-title-1 {
+        text-align: left;
+        .btn-prev {}
 
         >div {
-            position: absolute;
-            right: 0;
-            text-align: left;
 
             p {
-                font-size: 1vw;
                 color: #B3ACA2;
             }
-
-            h1 {
-                font-size: 3vw;
-            }
-
-
 
             >div {
                 margin-top: 10px;
@@ -72,9 +62,6 @@ p {
             .review {
                 margin-top: 10rem;
 
-                h3 {
-                    font-size: 2vw;
-                }
 
                 .reviewer {
                     margin-top: 30px;
@@ -88,13 +75,7 @@ p {
                         padding: 10px;
                         margin-left: 5%;
 
-                        h5 {
-                            font-size: 2vw;
-                        }
 
-                        p {
-                            font-size: 1vw;
-                        }
                     }
                 }
             }
@@ -365,9 +346,6 @@ p {
 
 
 @media (max-width: 575.98px) {
-    .intro-2-image-1 {
-        display: none;
-    }
 
     .card-title {
         font-size: 1rem;
@@ -379,15 +357,28 @@ p {
 
     #cta .cta>div {
         padding-left: 0;
-        padding-right: 0 ;
+        padding-right: 0;
     }
 }
 
-// // Small devices (landscape phones, less than 768px)
+// Small devices (landscape phones, less than 768px)
 // @media (max-width: 767.98px) { ... }
 
-// // Medium devices (tablets, less than 992px)
-// @media (max-width: 991.98px) { ... }
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .intro-2-image-1 {
+        display: none;
+    }
 
-// // Large devices (desktops, less than 1200px)
+    .btn-intro1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+// Large devices (desktops, less than 1200px)
 // @media (max-width: 1199.98px) { ... }

@@ -47,6 +47,7 @@ p {
 
     .intro-title-1 {
         text-align: left;
+
         .btn-prev {}
 
         >div {
@@ -118,6 +119,10 @@ p {
 
 .intro-3 {
     margin-top: 10rem;
+}
+
+#intro-3 {
+    margin-top: 10rem;
 
     .intro-info-3 {
         text-align: left;
@@ -133,6 +138,12 @@ p {
         img {
             margin: 20px 0
         }
+    }
+
+    .intro-items-3 {
+        margin-top: 4rem;
+
+        .intro-item-3 {}
     }
 }
 
@@ -382,3 +393,71 @@ p {
 
 // Large devices (desktops, less than 1200px)
 // @media (max-width: 1199.98px) { ... }
+
+
+
+.slider {
+  
+    // .slider__item
+    &__item {
+      transform: scale(0.85);
+      
+      // .slider__item--1
+      &--1 {
+        // #slide-1:checked ~ .slider__holder .slider__item--1
+        #slide-1:checked ~ .slider__holder & { 
+          transform: scale(1);
+        }
+      }
+      
+      // .slider__item--2
+      &--2 {
+        // #slide-2:checked ~ .slider__holder .slider__item--2
+        #slide-2:checked ~ .slider__holder & { 
+          transform: scale(1);
+        }
+      }
+      
+      // .slider__item--3
+      &--3 {
+        // #slide-3:checked ~ .slider__holder .slider__item--3
+        #slide-3:checked ~ .slider__holder & { 
+          transform: scale(1);
+        }
+      }
+      
+      // .slider__item--4
+      &--4 {
+        // #slide-4:checked ~ .slider__holder .slider__item--4
+        #slide-4:checked ~ .slider__holder & { 
+          transform: scale(1);
+        }
+      }
+      
+      // .slider__item--5
+      &--5 {
+        // #slide-5:checked ~ .slider__holder .slider__item--5
+        #slide-5:checked ~ .slider__holder & { 
+          transform: scale(1);
+        }
+      }
+    }
+    
+  }
+
+  .bullets {
+    // .bullets__item
+    &__item {
+      @include default-transition();
+      // Loops through all the bullet points
+      @for $bullet from 1 through 5 {
+        // .bullets__item--(bullet-number)
+        &--#{$bullet} {
+          // #slide-(number):checked ~ .bullets .bullets__item--(bullet-number)
+          #slide-#{$bullet}:checked ~ .bullets & {
+            background: $white;
+          }
+        }
+      }
+    }
+  }

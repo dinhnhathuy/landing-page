@@ -7,12 +7,7 @@ $theme-colors: ("primary": #ff3a52,
 
 body {
     width: 100%;
-    background-image: linear-gradient(to bottom, #F7F9C3, #FFFF),
-        linear-gradient(to bottom, #C4F7F4, #FFFF);
-    background-repeat: no-repeat,
-        no-repeat;
-    background-position: 200%,
-        0 300px;
+
 }
 
 h1 {
@@ -35,7 +30,13 @@ p {
     font-family: Helvetica Neue/regular;
 }
 
+#theheader {
+    background-image: linear-gradient(to bottom, #F9F3D2, #FFFF);
+    background-repeat: no-repeat;
+}
+
 .intro-1 {
+
     // position: absolute;
     // right: 0;
     margin-top: 5em;
@@ -84,6 +85,13 @@ p {
     }
 }
 
+#intro-2 {
+    background-image: linear-gradient(to bottom, #BBFBF9, #FFFF);
+    background-repeat: no-repeat;
+    background-position: 0 22rem;
+    padding-bottom: 5rem;
+}
+
 .intro-2 {
     margin-top: 10rem;
 
@@ -118,11 +126,7 @@ p {
 }
 
 .intro-3 {
-    margin-top: 10rem;
-}
-
-#intro-3 {
-    margin-top: 10rem;
+    margin-top: 5rem;
 
     .intro-info-3 {
         text-align: left;
@@ -149,6 +153,14 @@ p {
 
 #info {
     margin-top: 10rem;
+
+    .info-container {
+        background-image: linear-gradient(to bottom, #F9F3D2, #FFFF), url('/img/info-background.png');
+        background-repeat: no-repeat, no-repeat;
+        // background-position: 0, right top;
+        border-radius: 12px;
+        padding-top: 5rem;
+    }
 }
 
 .info-card {
@@ -206,6 +218,8 @@ p {
 
 #review {
     margin-top: 6rem;
+    background: url(/img/review-background1.png) left center no-repeat, url(/img/review-background2.png) right center no-repeat;
+    background-size: 100px;
 
     .reviews {
         .review {
@@ -234,6 +248,13 @@ p {
     margin-top: 10rem;
 
     .cta {
+        // background-image: url(/img/cta-background.png),
+        //             linear-gradient(#FFC928,#FFC928);
+        background-image: url(/img/cta-background.png);
+        background: #FFC928;
+        opacity: 0.2;
+        border-radius: 12px;
+
         >div {
             padding-left: 5em;
             padding-right: 5em;
@@ -372,6 +393,14 @@ p {
     }
 }
 
+#hero {
+    .hero-info {}
+
+    .hero-image {
+        width: 80%;
+    }
+}
+
 // Small devices (landscape phones, less than 768px)
 // @media (max-width: 767.98px) { ... }
 
@@ -389,75 +418,83 @@ p {
         transform: translate(-50%, -50%);
     }
 
+
 }
 
 // Large devices (desktops, less than 1200px)
-// @media (max-width: 1199.98px) { ... }
+@media (max-width: 1199.98px) {
+    // .info-container{
+    //     padding: 10rem;
+    // }
+
+}
 
 
 
 .slider {
-  
+
     // .slider__item
     &__item {
-      transform: scale(0.85);
-      
-      // .slider__item--1
-      &--1 {
-        // #slide-1:checked ~ .slider__holder .slider__item--1
-        #slide-1:checked ~ .slider__holder & { 
-          transform: scale(1);
-        }
-      }
-      
-      // .slider__item--2
-      &--2 {
-        // #slide-2:checked ~ .slider__holder .slider__item--2
-        #slide-2:checked ~ .slider__holder & { 
-          transform: scale(1);
-        }
-      }
-      
-      // .slider__item--3
-      &--3 {
-        // #slide-3:checked ~ .slider__holder .slider__item--3
-        #slide-3:checked ~ .slider__holder & { 
-          transform: scale(1);
-        }
-      }
-      
-      // .slider__item--4
-      &--4 {
-        // #slide-4:checked ~ .slider__holder .slider__item--4
-        #slide-4:checked ~ .slider__holder & { 
-          transform: scale(1);
-        }
-      }
-      
-      // .slider__item--5
-      &--5 {
-        // #slide-5:checked ~ .slider__holder .slider__item--5
-        #slide-5:checked ~ .slider__holder & { 
-          transform: scale(1);
-        }
-      }
-    }
-    
-  }
+        transform: scale(0.85);
 
-  .bullets {
-    // .bullets__item
-    &__item {
-      @include default-transition();
-      // Loops through all the bullet points
-      @for $bullet from 1 through 5 {
-        // .bullets__item--(bullet-number)
-        &--#{$bullet} {
-          // #slide-(number):checked ~ .bullets .bullets__item--(bullet-number)
-          #slide-#{$bullet}:checked ~ .bullets & {
-            background: $white;
-          }
+        // .slider__item--1
+        &--1 {
+
+            // #slide-1:checked ~ .slider__holder .slider__item--1
+            #slide-1:checked~.slider__holder & {
+                transform: scale(1);
+            }
         }
-      }
+
+        // .slider__item--2
+        &--2 {
+
+            // #slide-2:checked ~ .slider__holder .slider__item--2
+            #slide-2:checked~.slider__holder & {
+                transform: scale(1);
+            }
+        }
+
+        // .slider__item--3
+        &--3 {
+
+            // #slide-3:checked ~ .slider__holder .slider__item--3
+            #slide-3:checked~.slider__holder & {
+                transform: scale(1);
+            }
+        }
+
+        // .slider__item--4
+        &--4 {
+
+            // #slide-4:checked ~ .slider__holder .slider__item--4
+            #slide-4:checked~.slider__holder & {
+                transform: scale(1);
+            }
+        }
+
+        // .slider__item--5
+        &--5 {
+
+            // #slide-5:checked ~ .slider__holder .slider__item--5
+            #slide-5:checked~.slider__holder & {
+                transform: scale(1);
+            }
+        }
     }
-  }
+
+}
+
+//   .bullets {
+//     // .bullets__item
+//     &__item {
+//       @include default-transition();
+//       // Loops through all the bullet points
+//       @for $bullet from 1 through 5 {
+//         // .bullets__item--(bullet-number)
+//         &--#{$bullet} {
+//           / 
+//         }
+//       }
+//     }
+//   }

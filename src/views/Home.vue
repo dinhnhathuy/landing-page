@@ -5,6 +5,7 @@
     <book></book>
     <testimonials></testimonials>
     <relative-logos></relative-logos>
+    <subcribe></subcribe>
   </div>
 </template>
 
@@ -16,7 +17,7 @@ import Destinations from '../components/Destinations.vue'
 import Book from '../components/Book.vue'
 import Testimonials from '../components/Testimonials.vue'
 import RelativeLogos from '../components/RelativeLogos.vue'
-// import Subscribe from ''
+import Subcribe from '../components/Subcribe.vue';
 
 export default {
   name: "Home",
@@ -25,7 +26,8 @@ export default {
     Destinations,
     Book,
     Testimonials,
-    RelativeLogos
+    RelativeLogos,
+    Subcribe
   },
 };
 </script>

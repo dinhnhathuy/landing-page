@@ -1,5 +1,5 @@
 <template>
-  <div class=" w-4/12 p-6">
+  <div class="p-2">
     <div class="rounded-3xl overflow-hidden shadow-lg relative z-10">
       <img
         class="w-full h-80"

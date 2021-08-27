@@ -1,19 +1,49 @@
 <template>
-    <agile>
-        <div class="slide h-12 bg-gray-600">
-            <h3>slide 1</h3>
-        </div>
-        <div class="slide h-12 bg-gray-600">
-            <h3>slide n</h3>
-        </div>
-    </agile>
+  <swiper
+    :modules="modules"
+    :slides-per-view="3"
+    :space-between="50"
+    navigation
+    :pagination="{ clickable: true }"
+    :scrollbar="{ draggable: true }"
+    @swiper="onSwiper"
+    @slideChange="onSlideChange"
+  >
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    ...
+  </swiper>
 </template>
 <script>
-import { VueAgile } from 'vue-agile'
+  // import Swiper core and required modules
+  import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
-export default { 
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // Import Swiper styles
+import 'swiper/swiper.min.css'
+import 'swiper/components/pagination/pagination.min.css'
+
+  // Import Swiper styles
+  export default {
     components: {
-        agile: VueAgile 
-    }
-}
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      const onSwiper = (swiper) => {
+        console.log(swiper);
+      };
+      const onSlideChange = () => {
+        console.log('slide change');
+      };
+      return {
+        onSwiper,
+        onSlideChange,
+        modules: [Navigation, Pagination, Scrollbar, A11y],
+      };
+    },
+  };
 </script>

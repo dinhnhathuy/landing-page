@@ -16,7 +16,7 @@ import Destinations from '../components/Destinations.vue'
 import Book from '../components/Book.vue'
 import Testimonials from '../components/Testimonials.vue'
 import RelativeLogos from '../components/RelativeLogos.vue'
-import Subscribe from ''
+// import Subscribe from ''
 
 export default {
   name: "Home",

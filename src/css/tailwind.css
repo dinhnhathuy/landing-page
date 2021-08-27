@@ -1,0 +1,13 @@
+@tailwind base;
+
+@tailwind components;
+.nav {
+    @apply text-sm flex justify-around lg:flex-grow xl:mx-8 flex-col md:flex-row w-full text-left transform transition translate-y-2 absolute md:-top-6 bg-white md:bg-transparent opacity-90 z-10 rounded-lg
+}
+.nav-item {
+    @apply block lg:inline-block whitespace-nowrap text-sm lg:text-base font-bold mx-2  p-2 border-2 border-opacity-0 rounded-lg
+}
+.nav-item-main {
+    @apply hover:border-opacity-95 hover:border-gray-400 sm:hover:bg-transparent 
+}
+@tailwind utilities;
